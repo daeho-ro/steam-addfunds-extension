@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Steam 충전 도우미",
+  "version": "0.1",
+  "description": "Steam에서 원하는 금액으로 충전할 수 있도록 도와주는 확장 프로그램입니다.",
+  "author": "GreedyLabs",
+  "homepage_url": "https://github.com/GreedyLabs/extension-steam-addfunds",
+  "permissions": ["scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://store.steampowered.com/steamaccount/addfunds*"],
+      "css": ["styles.css"],
+      "js": ["config.js", "content.js"]
+    }
+  ]
+}
