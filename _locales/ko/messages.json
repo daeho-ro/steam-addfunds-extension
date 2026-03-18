@@ -1,0 +1,38 @@
+{
+  "extName": {
+    "message": "Steam 충전 도우미"
+  },
+  "extDescription": {
+    "message": "Steam 지갑에 원하는 금액을 직접 입력해 충전할 수 있습니다."
+  },
+  "currency": {
+    "message": "KRW"
+  },
+  "minAmount": {
+    "message": "5000"
+  },
+  "multiplier": {
+    "message": "100"
+  },
+  "title": {
+    "message": "Steam 충전"
+  },
+  "placeholder": {
+    "message": "예: $AMOUNT$",
+    "placeholders": { "amount": { "content": "$1" } }
+  },
+  "buttonText": {
+    "message": "자금 추가"
+  },
+  "minAmountText": {
+    "message": "최소 $AMOUNT$ 이상",
+    "placeholders": { "amount": { "content": "$1" } }
+  },
+  "inputError": {
+    "message": "$AMOUNT$ 이상 입력해주세요.",
+    "placeholders": { "amount": { "content": "$1" } }
+  },
+  "formNotFoundError": {
+    "message": "충전 폼을 찾을 수 없습니다. 페이지를 새로고침 해주세요."
+  }
+}

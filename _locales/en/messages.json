@@ -1,0 +1,38 @@
+{
+  "extName": {
+    "message": "Steam Add Funds Helper"
+  },
+  "extDescription": {
+    "message": "Enter a custom amount to add funds to your Steam wallet."
+  },
+  "currency": {
+    "message": "USD"
+  },
+  "minAmount": {
+    "message": "5"
+  },
+  "multiplier": {
+    "message": "100"
+  },
+  "title": {
+    "message": "Add Steam Funds"
+  },
+  "placeholder": {
+    "message": "e.g. $AMOUNT$",
+    "placeholders": { "amount": { "content": "$1" } }
+  },
+  "buttonText": {
+    "message": "Add Funds"
+  },
+  "minAmountText": {
+    "message": "Minimum $AMOUNT$",
+    "placeholders": { "amount": { "content": "$1" } }
+  },
+  "inputError": {
+    "message": "Please enter $AMOUNT$ or more.",
+    "placeholders": { "amount": { "content": "$1" } }
+  },
+  "formNotFoundError": {
+    "message": "Payment form not found. Please refresh the page."
+  }
+}
