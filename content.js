@@ -4,13 +4,29 @@
   const container = document.getElementById('prices_user');
   if (!container) return;
 
+  const ref = container.querySelector('[data-amount][data-currency]');
+  if (!ref) return;
+
+  const currency = ref.dataset.currency;
+
   const t = chrome.i18n.getMessage;
   const locale = chrome.i18n.getUILanguage();
-  const currency = t('currency');
-  const minAmount = Number(t('minAmount'));
-  const multiplier = Number(t('multiplier'));
-
   const fmt = new Intl.NumberFormat(locale, { style: 'currency', currency });
+
+  function parseCurrencyText(text) {
+    const parts = fmt.formatToParts(1234.5);
+    const group = parts.find(p => p.type === 'group')?.value ?? '';
+    const decimal = parts.find(p => p.type === 'decimal')?.value ?? '.';
+    const symbol = parts.find(p => p.type === 'currency')?.value ?? '';
+    const intl = parseFloat(
+      text.replaceAll(symbol, '').replaceAll(group, '').replace(decimal, '.').trim()
+    );
+    return isFinite(intl) ? intl : parseFloat(text.replace(/[^\d.]/g, ''));
+  }
+
+  const priceText = ref.closest('.addfunds_area_purchase_game').querySelector('.price').textContent;
+  const minAmount = parseCurrencyText(priceText);
+  const multiplier = Number(ref.dataset.amount) / minAmount;
   const fmtMin = fmt.format(minAmount);
 
   const card = document.createElement('div');

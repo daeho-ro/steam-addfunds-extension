@@ -5,15 +5,6 @@
   "extDescription": {
     "message": "Steam 지갑에 원하는 금액을 직접 입력해 충전할 수 있습니다."
   },
-  "currency": {
-    "message": "KRW"
-  },
-  "minAmount": {
-    "message": "5000"
-  },
-  "multiplier": {
-    "message": "100"
-  },
   "title": {
     "message": "Steam 충전"
   },

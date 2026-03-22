@@ -5,15 +5,6 @@
   "extDescription": {
     "message": "Enter a custom amount to add funds to your Steam wallet."
   },
-  "currency": {
-    "message": "USD"
-  },
-  "minAmount": {
-    "message": "5"
-  },
-  "multiplier": {
-    "message": "100"
-  },
   "title": {
     "message": "Add Steam Funds"
   },
